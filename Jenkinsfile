@@ -9,7 +9,10 @@ pipeline {
                 }
             }
             steps {
-                echo 'Hello World'
+                sh '''
+                    npm ci
+                    npm run build
+                '''
             }
         }
     }
